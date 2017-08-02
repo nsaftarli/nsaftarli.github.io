@@ -76,18 +76,31 @@ a:hover {
     /*padding: 0px;*/
     padding-left: 12px;
     padding-right: 12px;
-    border: 3px solid #ffffff;
-    background:#ffffff;
+    border: 3px solid #eceff1 ;
+    background: rgba(255,255,255,0.5);
 }
 
 .photo {
     width: 240px;
     height: 240px;
+    margin-left: auto;
+    margin-right: auto;
+
+    bottom:50%;
 }
 
 embed#metxt{
-    text-align:center;
-    width: 100%;
+    /*text-align:center;*/
+    /*width: 100%;*/
+}
+
+div#aboutme {
+    margin-top: 110px;
+    margin-left: auto;
+    margin-right:auto;
+    text-align: left;
+    width:80%;
+    font-size:14px;
 }
 
 

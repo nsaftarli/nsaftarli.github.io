@@ -16,19 +16,47 @@
 
 <script src="assets/js/bootstrap.min.js"></script>
 
-<div id="mainDiv">
+<div id="mainDiv" class="header-content">
 
-	<h1>Nariman Saftarli</h1>
+    <div class="header-content-inner">
+    	<h1>Nariman Saftarli</h1>
+    </div>
 	<div class="photo">
      <img src="./assets/files/placeholder.jpg">   
+    </div>
+
+    <script type="text/javascript">
+    var file = './assets/files/aboutme.txt'
+    var str = ''
+        $.get(file,function(text) {
+            // $('#aboutme').html(data);
+            str = text;
+            
+            $('#aboutme').html(text);
+        }, 'text');
+    </script>
+
+
+
+    <div id="aboutme">
+        <!-- <object data="assets/files/aboutme.txt" type="text/plain" width="500" style="height:50px"> -->
+        <embed id="metxt" src="assets/files/aboutme.txt">
+        
+
+
+
     </div>
 
     <div class="table" id="morelinks">
         <ul id="horizontal-list">
             <li class="landingLinks"><a id="summary"  href="./summary.html">Summary</a></li>
+            <li> <span class="bars">|</span></li>
             <li class="landingLinks"><a id="blog" href="./comingSoon.html">Blog</a></li>
+            <li> <span class="bars">|</span></li>
             <li class="landingLinks"><a id="github" href="http://github.com/nsaftarli">GitHub</a></li>
+            <li> <span class="bars">|</span></li>
             <li class="landingLinks"><a id="resume" href="./assets/files/NSaftarli-Resume.pdf">Resumé</a></li>
+            <li> <span class="bars">|</span></li>
             <li class="landingLinks"><a id="contact" href="./contactInfo.html">Contact</a></li>
         </ul>
     </div>

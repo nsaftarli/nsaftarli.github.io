@@ -15,7 +15,7 @@ h1 {
     /*color: #ad1457;*/
     /*Override*/
     color: #af899a;
-    font-size: 48px;
+    font-size: 64px;
     font-weight: 500;
     text-align:center;
     margin-top:7%;
@@ -39,8 +39,9 @@ h1 {
     width:88%;
     text-align: center;
     position:fixed;
-    bottom:20%;
+    bottom:10%;
     margin-bottom:0px;
+    font-size:28px;
   
 }
 
@@ -57,7 +58,7 @@ ul#horizontal-list li {
 
     /*color: #eeeeee;*/
     /*Override*/
-    color: #dad6d8;
+    color: #ffffff;
 
  
 }
@@ -75,7 +76,7 @@ ul#horizontal-list li {
 }
 a{
     /*Override*/
-    color: #dad6d8;
+    color: #ffffff;
     padding-left: 15px;
     padding-right:15px;
     padding-top:3px;
@@ -125,12 +126,14 @@ embed#metxt{
 div#aboutme {
 
     /*Override*/
-    color: #dad6d8;
+    color: #ffffff;
 
 
     margin-top: 110px;
-    margin-left: auto;
-    margin-right:auto;
+    margin-left: 10%;
+    padding-left: 5%;
+    margin-right:10%;
+    margin-bottom:10%;
     text-align: left;
     width:80%;
     font-size:14px;
@@ -144,7 +147,7 @@ div#aboutme {
 }
 
 .table#contactIcons {
-    color: #dad6d8;
+    color: #ffffff;
     width:10%;
     text-align:center;
 
@@ -168,7 +171,7 @@ hr {
     display: block;
     height: 1px;
     border: 0;
-    border-top: 1px solid #ccc;
+    border-top: 3px solid #af899a;
     /*margin: 1em 0;*/
     padding: 0; 
 }

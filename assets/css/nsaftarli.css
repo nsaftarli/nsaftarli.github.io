@@ -145,8 +145,12 @@ div#aboutme {
 
 .table#contactIcons {
     color: #dad6d8;
+    width:10%;
+    text-align:center;
+
     font-size:36px;
     margin-top:10%;
+    margin-right:30px;
 
    
     
@@ -157,7 +161,16 @@ div#aboutme {
 }
 
 .table#contactIcons #vertical-list li {
-    margin-top:50px;
+    margin-top:10px;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    /*margin: 1em 0;*/
+    padding: 0; 
 }
 
 

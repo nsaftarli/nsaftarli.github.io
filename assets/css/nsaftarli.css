@@ -1,31 +1,55 @@
+html {
+    height:100%;
+}
+
 body {
    /* background: #eceff1;*/
    /*Override*/
     background: #3f4052;
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 200;
     /*font-weight: 400;*/
     /*font-weight:100;*/
-    font-size: 24px;
+    /*font-size: 24px;*/
     overflow-y:hidden;
 
+
+    height: inherit;
+
+}
+
+#header {
+    width:inherit;
+    margin:0% 0% 5% 12%;
 }
 
 h1 {
     /*color: #ad1457;*/
     /*Override*/
     color: #dea1a1;
+
+    /*
+    Font Features
+    */
     font-size: 64px;
-    font-weight: 500;
+    font-weight: 700;
+
+
     text-align:left;
-    margin-top:7%;
-    margin-left:10%;
+
+    /* Margins */
+    margin-top:0px;
+    padding-top:100px;
+    
+    /*margin-left:17%;*/
+    padding-left:12%;
 }
 
 
 #mainDiv {
-    margin: 5%; 
-    height:100%;
+    /*margin: 5%; */
+    /*height:100%;*/
+    height:inherit;
 }
 
 /*#links {
@@ -37,13 +61,18 @@ h1 {
 
 /*    margin-top: 40%;
 */    
-    width:88%;
+    width:inherit;
     text-align: left;
     top:20%;
     /*left:9.5%;*/
     position:fixed;
 /*    bottom:10%;
-*/    margin-bottom:0px;
+*/    
+    margin-bottom:0px;
+    margin-left:12%;
+    padding-left:6%;
+
+
     font-size:28px;
 
         /*color: #dea1a1;*/
@@ -51,7 +80,7 @@ h1 {
     /*font-weight: 500;*/
     /*text-align:left;*/
     /*margin-top:7%;*/
-    margin-left:5%;
+    /*margin-left:5%;*/
     
 }
 

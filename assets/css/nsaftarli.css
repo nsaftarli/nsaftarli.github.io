@@ -1,15 +1,20 @@
 body {
-    background: #eceff1;
+   /* background: #eceff1;*/
+   /*Override*/
+    background: #3f4052;
     font-family: 'Work Sans', sans-serif;
     font-weight: 200;
     /*font-weight: 400;*/
     /*font-weight:100;*/
     font-size: 24px;
+    overflow-y:hidden;
 
 }
 
 h1 {
-    color: #ad1457;
+    /*color: #ad1457;*/
+    /*Override*/
+    color: #af899a;
     font-size: 48px;
     font-weight: 500;
     text-align:center;
@@ -27,7 +32,7 @@ h1 {
 
 }*/
 
-.table {
+.table#morelinks {
 
 /*    margin-top: 40%;
 */    
@@ -39,6 +44,10 @@ h1 {
   
 }
 
+ul {
+    list-style: none;
+}
+
 ul#horizontal-list li {
 
     display: inline;
@@ -46,19 +55,27 @@ ul#horizontal-list li {
 }
 .landingLinks {
 
-    color: #eeeeee;
-
+    /*color: #eeeeee;*/
+    /*Override*/
+    color: #dad6d8;
 
  
 }
 
 .bars {
-    color: #ad1457;
+    /*color: #ad1457;*/
+
+    /* Override */
+    color: #af899a;
+
+
     font-weight: 500;
     font-size:28px;
 
 }
 a{
+    /*Override*/
+    color: #dad6d8;
     padding-left: 15px;
     padding-right:15px;
     padding-top:3px;
@@ -72,13 +89,24 @@ a{
 a:hover {
     text-decoration: none;
     /*font-weight:400;*/
-    color: #08c;
+
+
+    /*color: #08c;*/
+    /*Override*/
+    color: #af899a;
+
     /*padding: 0px;*/
-    padding-left: 12px;
-    padding-right: 12px;
-    border: 3px solid #eceff1 ;
-    background: rgba(255,255,255,0.5);
+    padding-left: 14px;
+    padding-right: 14px;
+    border: 1px solid rgba(125,125,125,0.2) ;
+    border-radius: 5px;
+    background: rgba(255,255,255,0.1);
 }
+
+/*a#summary{
+    border:3px dashed #ffffff;
+    background: rgba(255,255,255,0.2);
+}*/
 
 .photo {
     width: 240px;
@@ -95,6 +123,11 @@ embed#metxt{
 }
 
 div#aboutme {
+
+    /*Override*/
+    color: #dad6d8;
+
+
     margin-top: 110px;
     margin-left: auto;
     margin-right:auto;
@@ -102,6 +135,31 @@ div#aboutme {
     width:80%;
     font-size:14px;
 }
+
+.contactIcons {
+    color: #000000;
+}
+#contactIcons {
+    color: #000000;
+}
+
+.table#contactIcons {
+    color: #dad6d8;
+    font-size:36px;
+    margin-top:10%;
+
+   
+    
+    position:fixed;
+    /*position: absolute;*/
+    top:0;
+    left: 0;
+}
+
+.table#contactIcons #vertical-list li {
+    margin-top:50px;
+}
+
 
 
 

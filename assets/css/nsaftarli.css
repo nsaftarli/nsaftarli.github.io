@@ -47,6 +47,10 @@ ul {
     list-style: none;
 }
 
+ul#horizontal-list {
+    white-space: nowrap;
+}
+
 ul#horizontal-list li {
     display: inline;
 }

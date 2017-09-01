@@ -9,6 +9,7 @@ $hoverBackground: rgba(255,255,255,0.1);
 body{
     background: $backgroundColor;
     font-family: 'Libre-Franklin',sans-serif;
+    // font-family: 'Alegreya', serif;
     text-align: left;
 
 }
@@ -28,7 +29,7 @@ h1{
     /* Layout */
     margin-top:7%;
     margin-bottom: 3%;
-    margin-left:10%;
+    margin-left:13%;
     padding-left: 3%;
 }
 
@@ -45,6 +46,10 @@ ul {
     font-size:28px;
     color: $textColor;
     text-align:left;
+
+    margin-left: 3%;
+    margin-top: 50px;
+    font-weight: 300;
 
     /* Spacing */
 
@@ -91,9 +96,28 @@ ul {
             }
     }
 }
+#dividingline {
+    color: #dea1a1;
+    border:0;
+    border-top: 1px solid;
+    margin-left: 16%;
+    // margin-right:10%;
+    min-width:95%;
+    // overflow-x: hidden;
+    // white-space: nowrap;
+
+}
 
 div #content {
-    font-size:64px;
+    margin-top: 5%;
+    margin-left: 16%;
+    margin-right: 5%; 
+    color: #ffffff;
+    font-size:24px;
+    line-height: 31px;
+    font-family: 'Merriweather', serif;
+    font-weight: 200;
+    word-wrap: break-word; 
 }
 
 #contactIcons {
@@ -119,6 +143,7 @@ div #content {
                 padding:auto;
             }
             a:hover {
+                width:100%;
                 color: $primaryColor;
             }
         }

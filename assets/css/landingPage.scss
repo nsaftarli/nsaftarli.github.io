@@ -1,0 +1,136 @@
+$backgroundColor: #3f4052;
+$primaryColor: #dea1a1;
+$sideBarColor: #776b6b;
+$textColor: #ffffff;
+$borderColor: rgba(125,125,125,0.2);
+$hoverBackground: rgba(255,255,255,0.1);
+
+
+body{
+    background: $backgroundColor;
+    font-family: 'Libre-Franklin',sans-serif;
+    text-align: left;
+
+}
+
+#mainDiv{
+    height:100%;
+    width: 100%;
+}
+
+h1{
+    /* Color and size */
+    color: $primaryColor;
+    font-size: 64px;
+    font-weight:600;
+    white-space: nowrap;
+
+    /* Layout */
+    margin-top:7%;
+    margin-bottom: 3%;
+    margin-left:10%;
+    padding-left: 3%;
+}
+
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+#morelinks {
+    list-style:none;
+    padding: 0;
+    margin: 0;
+    font-size:28px;
+    color: $textColor;
+    text-align:left;
+
+    /* Spacing */
+
+
+    #horizontal-list {
+        list-style: none;
+        white-space: nowrap;
+
+        /* Spacing */
+        margin-left: 9%;
+        padding-left: 3%;
+
+        // display: inline;
+
+        li {
+            display: inline;
+        }
+
+        a{
+            color: $textColor;
+
+            padding-left:15px;
+            padding-right:15px;
+            // text-align:left;
+
+        }
+        a:hover{
+            text-decoration: none;
+            color: $primaryColor;
+
+            border: 1px solid $borderColor;
+            border-radius: 5px;
+            background: $hoverBackground;
+
+            /* Spacing */
+            padding-left:14px;
+            padding-right:14px;
+        }
+
+        .bars {
+                color: $primaryColor;
+                font-weight:500;
+                font-size:28px;
+            }
+    }
+}
+
+#contactIcons {
+    background: $sideBarColor;
+    position:fixed;
+    top:0;
+    text-align:center;
+
+    width: 10%;
+    height:100%;
+    font-size:48px;
+    // font-size:7vw;
+
+    /* Spacing */
+    margin-top:0;
+
+    #vertical-list {
+        margin-top:65%;
+        
+        li {
+            a {
+                color: $textColor;
+                padding:auto;
+            }
+            a:hover {
+                color: $primaryColor;
+            }
+        }
+
+
+
+        li hr{
+            display: block;
+            color: $primaryColor;
+            height:1px;
+            font-weight: 800;
+
+            border: 0;
+            border-top:3px solid $primaryColor;
+        }
+        font-size-adjust: always;
+    }
+
+}

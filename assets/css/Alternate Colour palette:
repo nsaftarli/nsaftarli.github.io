@@ -1,0 +1,17 @@
+Alternate Colour palette:
+
+Header: #af899a
+Body text: #dad6d8
+Links: #dad6d8
+Bars: #af899a
+Background: #3f4052
+
+
+sidebar: #776b6b
+
+$backgroundColor: #3f4052;
+$primaryColor: #dea1a1;
+$sideBarColor: #776b6b;
+$textColor: #ffffff;
+$borderColor: rgba(125,125,125,0.2);
+$hoverBackground: rgba(255,255,255,0.1);

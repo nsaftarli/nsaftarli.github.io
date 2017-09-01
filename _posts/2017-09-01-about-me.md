@@ -1,0 +1,1 @@
+Hi! Everything is still under construction because I suck at CSS and all things design. All my contact information is on the contact page, and hopefully I'll have a website I'm not embarrassed about soon!

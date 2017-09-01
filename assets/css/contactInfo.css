@@ -1,0 +1,77 @@
+/*body {
+    background: #eceff1;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 200;
+    font-size: 24px;
+}
+
+h1 {
+
+    font-size: 48px;
+
+    font-weight: 500;
+
+
+}
+
+
+#mainDiv {
+    margin: 100px 25%;
+
+    text-align: center;
+    color: #ad1457;
+
+}
+
+.landingLinks {
+  
+    text-decoration: none;
+
+    font-weight: 400;
+    color: #767778;
+}
+
+.bars {
+    font-weight:500;
+    color: #ad1457;
+    margin: 5px;
+}
+
+a:hover {
+    font-weight: 500;
+ 
+
+}
+
+.photo {
+    margin-top: 200px;
+    margin-bottom: 400px;
+}
+
+
+*/
+li.contactLinks {
+    margin-top:10px;
+    margin-bottom:10px;
+    /*padding-bottom:50px;*/
+}
+
+a:hover{
+    border: none;
+    background: initial;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

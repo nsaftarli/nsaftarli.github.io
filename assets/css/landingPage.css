@@ -1,0 +1,84 @@
+body {
+  background: #3f4052;
+  font-family: 'Libre-Franklin',sans-serif;
+  text-align: left; }
+
+#mainDiv {
+  height: 100%;
+  width: 100%; }
+
+h1 {
+  /* Color and size */
+  color: #dea1a1;
+  font-size: 64px;
+  font-weight: 600;
+  white-space: nowrap;
+  /* Layout */
+  margin-top: 7%;
+  margin-bottom: 3%;
+  margin-left: 10%;
+  padding-left: 3%; }
+
+ul {
+  padding: 0;
+  margin: 0; }
+
+#morelinks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 28px;
+  color: white;
+  text-align: left;
+  /* Spacing */ }
+  #morelinks #horizontal-list {
+    list-style: none;
+    white-space: nowrap;
+    /* Spacing */
+    margin-left: 9%;
+    padding-left: 3%; }
+    #morelinks #horizontal-list li {
+      display: inline; }
+    #morelinks #horizontal-list a {
+      color: white;
+      padding-left: 15px;
+      padding-right: 15px; }
+    #morelinks #horizontal-list a:hover {
+      text-decoration: none;
+      color: #dea1a1;
+      border: 1px solid rgba(125, 125, 125, 0.2);
+      border-radius: 5px;
+      background: rgba(255, 255, 255, 0.1);
+      /* Spacing */
+      padding-left: 14px;
+      padding-right: 14px; }
+    #morelinks #horizontal-list .bars {
+      color: #dea1a1;
+      font-weight: 500;
+      font-size: 28px; }
+
+#contactIcons {
+  background: #776b6b;
+  position: fixed;
+  top: 0;
+  text-align: center;
+  width: 10%;
+  height: 100%;
+  font-size: 48px;
+  /* Spacing */
+  margin-top: 0; }
+  #contactIcons #vertical-list {
+    margin-top: 65%;
+    font-size-adjust: always; }
+    #contactIcons #vertical-list li a {
+      color: white;
+      padding: auto; }
+    #contactIcons #vertical-list li a:hover {
+      color: #dea1a1; }
+    #contactIcons #vertical-list li hr {
+      display: block;
+      color: #dea1a1;
+      height: 1px;
+      font-weight: 800;
+      border: 0;
+      border-top: 3px solid #dea1a1; }

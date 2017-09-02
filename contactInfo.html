@@ -1,0 +1,12 @@
+---
+layout: default
+title: Contact Information
+---
+
+<div>
+{% capture my_include%}
+    {% include contact.md %}
+{% endcapture %}
+{{my_include | markdownify}}
+</div>
+

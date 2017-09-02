@@ -159,22 +159,28 @@ div #content {
 
     width: 10%;
     height:100%;
-    font-size:48px;
+    font-size:72px;
+
+
+    //     @media only screen and (max-width: 850px) {
+    //     font-size: 200%;
+    // }
+    //     @media only screen and (max-width: 850px) {
+    //     font-size: 200%;
+    // }
+    //     @media only screen and (max-width: 850px) {
+    //     font-size: 200%;
+    // }
     // font-size:7vw;
 
     /* Spacing */
     // margin-top:0;
-
     #vertical-list {
         list-style-type:none;
-        margin-top:110%;
-        
-        li img {
-            height:24px;
-            width:24px;
-            // margin-bottom: 31%;
-        }
+
         li {
+            margin-top:25%;
+            // margin-bottom:40%;
             a {
                 color: $textColor;
                 padding:auto;
@@ -195,8 +201,33 @@ div #content {
 
             border: 0;
             border-top:2px solid $primaryColor;
+
         }
         font-size-adjust: always;
     }
+
+/*     //Default
+    @media only screen and (min-width: 851px) {
+        font-size: 72px;
+
+        #vertical-list {
+            li {
+                margin-top: 25%;
+            }
+        }
+    }
+
+    @media only screen and (max-height: ) */
+
+
+
+
+
+
+
+
+
+
+
 
 }

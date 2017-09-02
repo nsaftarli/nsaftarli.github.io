@@ -3,10 +3,16 @@
     {% include head.html %}
 <body>
 
-<script src="assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
 <div id="mainDiv" class="header-content">
     <h1>
-        {{page.title}}
+        <a href="/">
+            {% if layout.blogpost == 'y' %}
+                {{'Blog'}}
+            {% else %}
+              {{page.title}}
+            {% endif %}
+        </a>
     </h1>
 
     <div class="table" id="morelinks">

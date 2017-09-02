@@ -20,6 +20,14 @@ body{
 }
 
 h1{
+    a {
+        text-decoration: none;
+        color: $primaryColor;
+    }
+    a:hover {
+        text-decoration: none;
+        color: $primaryColor;
+    }
     /* Color and size */
     color: $primaryColor;
     font-size: 64px;
@@ -32,6 +40,7 @@ h1{
     margin-left:13%;
     padding-left: 3%;
 }
+
 
 
 ul {
@@ -118,8 +127,8 @@ div #content {
     // margin-top: -5%;
     div.intro {
         margin-left:148px;
-        margin-top:-100px;
-        margin-bottom:6%;
+        margin-top:-135px;
+        margin-bottom:3%;
     }
     
     
@@ -129,6 +138,9 @@ div #content {
     font-size:24px;
     line-height: 31px;
     font-family: 'Merriweather', serif;
+    letter-spacing: .01rem;
+    // font-size: 1.8em;
+    // line-height: 1.75em;
     font-weight: 200;
     word-wrap: break-word; 
 }
@@ -150,7 +162,7 @@ div #content {
     // margin-top:0;
 
     #vertical-list {
-        margin-top:60%;
+        margin-top:110%;
         
         li img {
             height:24px;

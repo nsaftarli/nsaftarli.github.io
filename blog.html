@@ -3,6 +3,7 @@ layout: default
 title: Blog
 blog: y
 ---
+<link rel="stylesheet" type="text/css" href="/css/blog_css_file.css">
 
 <div class="container">
   <div class="blog-posts">
@@ -14,6 +15,12 @@ blog: y
         </span>
       </p>
       {{post.excerpt}}
+
+      {% capture my_include %}
+        {% include line.md %}
+      {% endcapture %}
+      {{ my_include | markdownify }}
+
     </div>
     {%endfor%}
   </div>

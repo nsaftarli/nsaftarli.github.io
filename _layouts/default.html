@@ -1,26 +1,20 @@
 <!DOCTYPE html>
 <html>
-
     {% include head.html %}
-
 <body>
 
-
 <script src="assets/js/bootstrap.min.js"></script>
-
 <div id="mainDiv" class="header-content">
-
-    <h1>{{page.title}}</h1>
-    
-
-
+    <h1>
+        {{page.title}}
+    </h1>
 
     <div class="table" id="morelinks">
         <ul id="horizontal-list">
             <!-- <li> <span class="bars">|</span></li> -->
             <li class="landingLinks"><a id="summary"  href="/">Home</a></li>
             <!-- <li> <span class="bars">|</span></li> -->
-            <li class="landingLinks"><a id="blog" href="./blog.html">Blog</a></li>
+            <li class="landingLinks"><a id="blog" href="/blog.html">Blog</a></li>
             <!-- <li> <span class="bars">|</span></li> -->
             <li class="landingLinks"><a id="github" href="http://github.com/nsaftarli">GitHub</a></li>
             <!-- <li> <span class="bars">|</span></li> -->
@@ -28,6 +22,7 @@
             <!-- <li> <span class="bars">|</span></li> -->
             <li class="landingLinks"><a id="contact" href="./contactInfo.html">Contact</a></li>
             <!-- <li> <span class="bars">|</span></li> -->
+            <li class="landingLinks"><a id="projects" href="./projects.html">Projects</a></li>
         </ul>
     </div>
     <span id="divider"><hr id="dividingline"></span>
@@ -39,18 +34,16 @@
                 {% include aboutme.md %}
             {% endcapture %}
             {{my_include | markdownify}}
-        {% elsif page.blog == 'y' %}
+        {% else %}
             {{content}}
-        {% endif %}
-        <!-- {{content}} -->
-        
-            
+        {% endif %}     
     </div>
 
     
 
     <div class="table" id="contactIcons">
         <ul id="vertical-list">
+
             <li class="contact-links">
                 <a href="https://github.com/nsaftarli">
                     <span class="fa fa-github"></span>

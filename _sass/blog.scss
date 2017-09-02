@@ -1,0 +1,24 @@
+$backgroundColor: #3f4052;
+$primaryColor: #dea1a1;
+$sideBarColor: #776b6b;
+$textColor: #ffffff;
+$borderColor: rgba(125,125,125,0.2);
+$hoverBackground: rgba(255,255,255,0.1);
+
+h3 {
+    a {
+        color: $textColor;
+    }
+    a:hover {
+        text-decoration: none;
+        color: $primaryColor;
+        // scale-color($primaryColor, kwargs)
+        // outline: 1px solid $primaryColor;
+
+    }
+}
+
+.date {
+    font-size:18px;
+    font-weight:100;
+}

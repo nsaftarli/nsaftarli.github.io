@@ -30,6 +30,8 @@ plugins:
 
 include: ['_pages']
 
+google_analytics: "UA-109577625-1"
+
 # defaults:
 #   - scope:
 #       path: "assets/img"

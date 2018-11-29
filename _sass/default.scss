@@ -135,6 +135,15 @@ div #content {
         margin-bottom: 10px;
         // padding-top:20px;
     }
+
+    ul li{
+        line-height: 31px;
+    }
+
+    a {
+        color: $primaryColor;
+        text-decoration: none;
+    }
     
     
     margin-left: 16%;
@@ -162,18 +171,6 @@ div #content {
     height:100%;
     font-size:72px;
 
-
-    //     @media only screen and (max-width: 850px) {
-    //     font-size: 200%;
-    // }
-    //     @media only screen and (max-width: 850px) {
-    //     font-size: 200%;
-    // }
-    //     @media only screen and (max-width: 850px) {
-    //     font-size: 200%;
-    // }
-    // font-size:7vw;
-
     /* Spacing */
     // margin-top:0;
     #vertical-list {
@@ -192,8 +189,6 @@ div #content {
             }
         }
 
-
-
         li hr{
             display: block;
             color: $primaryColor;
@@ -206,20 +201,6 @@ div #content {
         }
         font-size-adjust: always;
     }
-
-/*     //Default
-    @media only screen and (min-width: 851px) {
-        font-size: 72px;
-
-        #vertical-list {
-            li {
-                margin-top: 25%;
-            }
-        }
-    }
-
-    @media only screen and (max-height: ) */
-
 
 
 

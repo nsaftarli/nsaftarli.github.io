@@ -1,0 +1,35 @@
+---
+layout: post
+---
+
+During the summer of 2018, I worked as a research assistant for the [Ryerson Vision Lab](http://ryersonvisionlab.github.io), funded by the Undergraduate Research Opportunities (URO) program. In this time I did work on a paper which was accepted to the [Workshop on Computer Vision for Fashion, Art and Design](https://sites.google.com/view/eccvfashion) at the European Conference on Computer Vision ([ECCV2018](https://eccv2018.org/)). Using a fully convolutional neural network ([FCN](https://people.eecs.berkeley.edu/~jonlong/long_shelhamer_fcn.pdf)), we proposed an end-to-end method of learning to generate photomosaic art. This post is a little bit about that. The paper itself can be found [here](https://drive.google.com/file/d/1yPn-pY7kJGEWdQvt3AsFPPnQ-Bk1Dk4x/view?usp=sharing). 
+
+
+### The Idea
+
+Given an input image and a set of template images, our network learned to find some method of tiling the given templates to generate an approximation to the original image. First, a network pre-trained on classification ([VGG16](https://arxiv.org/pdf/1409.1556.pdf)) was used to encode the input image. A two-layer CNN was used to decode the image, and a softmax layer produced coefficients for the linear combination of templates. These coefficients were multiplied elementwise with the input templates and the products summed to produce a new image of the same pixel-wise resolution as the original (but with the effective resolution W/Tx * H/Ty where W, H were the resolution of the input, and Tx, Ty were the resolution of a template. We then fed this output image back into VGG16 and using the ability of the pre-trained network to extract meaningful feature representations, a self-supervisory signal was provided via a [feature reconstruction loss](https://cs.stanford.edu/people/jcjohns/papers/eccv16/JohnsonECCV16.pdf). We found empirically that the network produced better outputs by doing this in a multi-scale fashion. 
+
+### Problems
+
+* By itself, the process above failed to create faithful representations of images. We found that the network would converge on the trivial solution of using templates that had as little high frequency information as possible (flatter templates were used, anything with hard edges was avoided). This was due to the fact that the generated image had hard boundaries between templates which introduced noise into its feature representations. This made sense, as photomosaics looked at up close look very much like an unordered selection of tiles. By looking at a photomosaic from further away however, the high frequency details between (and internal to) templates are removed, and low frequency image structure can be observed. By applying a Gaussian blur to the generated image prior to feeding it into VGG16, we were able to remove some of the high frequency information introduced by the existence of hard edges between non-overlapping tiles. This step allowed us to produce fairly faithful representations of images during training time.
+
+* The task was to learn to arrange templates, not take linear combinations of them. The former process would produce a true photomosaic, where any part of the image would be completely represented by exactly one, discrete choice of template, while the latter would produce an image where any part of the image would be represented by a combination of *all* templates. Using argmax during training was impossible since argmax is non-differentiabe, and switching to using an argmax during inference was not useful since there was no guarantee that the template with the highest individual activation was actually the best choice (due to modulation from other templates). The solution was to encourage the distribution of the softmax coefficients to be as peaky as possible. We used a "temperature" parameter to scale the activations of the decoder prior to inputting them into the softmax. The magnitude of the scalar increased over time, encouraging convergence to a training output which was as close to discrete as possible while still being differentiable. This allowed argmax to be a trustworthy selector function during inference, as the softmax distribution ended up resembling it during training.
+
+* It was important to learn to keep global image information as consistent as possible. This meant that in selecting the best tile for a particular region, we needed to also consider how that selection would affect the larger, more global perception of the image. Simply put, a choice of tile at a particular region needed to "fit in" with the choice of tiles in the region around it. To solve this problem we included the consideration of scale in our feature reconstruction loss. This led to a choice of templates that was less sporadic across regions in the image, and added consistency to the selection process. 
+
+
+### Lessons Learned
+
+* Understand the problem and the data you are working with. This seems like a vague truthism, but many of the problems we ran into could have been solved much sooner had I thought about the data a little better. For instance, it made sense that tiling templates would introduce hard boundaries within an image, and I took this information for granted. Thinking about the existence of those hard boundaries however, immediately explains the trouble our network was having with converging on the trivial solution. Using one relatively flat template creates less noise in the boundary between templates than using different templates with lots of high frequency information. 
+
+* Research code is not always implemented the way the associated papers specify; when in doubt, go to the source code. One example we came up on in our work was feature normalization. Two different but similar style transfer papers specified that image features extracted from the pre-trained network were normalized. Upon looking through the code for both of these papers, we realized that while feature normalization was cited in the papers, the actual implementations excluded that from the code. This is a small detail, and one that is easy to miss. We discovered this only because all experiments where we used feature normalization performed miserably. Wondering about implementation errors and coming across no bugs, we went to the source code of these papers. The code for normalizing features was nowhere to be found. 
+
+* Best practices exist for a reason. Neglecting the use of best practices for the majority of the work made the code for even a relatively small codebase hard to maintain. Due to my neglect to use best practices from the start, we bumped up against numerous implementation problems, and this made extending the code and adding features far more painful than it needed to be. Eventually a ground up refactor was necessary, and despite the two-day overhead that this necessitated, the ease of adding experiments and changing source code increased significantly, and saved us time. 
+
+
+
+
+
+
+
+

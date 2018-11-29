@@ -26,3 +26,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "ffi", ">= 1.9.24"
+# gem "jekyll", ">= 3.6.3"
+

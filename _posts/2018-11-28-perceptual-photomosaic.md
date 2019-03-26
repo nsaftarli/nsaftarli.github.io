@@ -2,7 +2,7 @@
 layout: post
 ---
 
-During the summer of 2018, I worked as a research assistant for the [Ryerson Vision Lab](http://ryersonvisionlab.github.io), funded by the Undergraduate Research Opportunities (URO) program. In this time I did work on a paper which was accepted to the [Workshop on Computer Vision for Fashion, Art and Design](https://sites.google.com/view/eccvfashion) at the European Conference on Computer Vision ([ECCV2018](https://eccv2018.org/)). Using a fully convolutional neural network ([FCN](https://people.eecs.berkeley.edu/~jonlong/long_shelhamer_fcn.pdf)), we proposed an end-to-end method of learning to generate photomosaic art. This post is a little bit about that. The paper itself can be found [here](https://drive.google.com/file/d/1yPn-pY7kJGEWdQvt3AsFPPnQ-Bk1Dk4x/view?usp=sharing). 
+During the summer of 2018, I worked as a research assistant for the [Ryerson Vision Lab](http://ryersonvisionlab.github.io), funded by the Undergraduate Research Opportunities (URO) program. In this time I did work on a paper which was accepted to the [Workshop on Computer Vision for Fashion, Art and Design](https://sites.google.com/view/eccvfashion) at the European Conference on Computer Vision ([ECCV2018](https://eccv2018.org/)). Using a fully convolutional neural network ([FCN](https://people.eecs.berkeley.edu/~jonlong/long_shelhamer_fcn.pdf)), we proposed an end-to-end method of learning to generate photomosaic art. This post is a little bit about that. The paper itself can be found [here](https://drive.google.com/file/d/1yPn-pY7kJGEWdQvt3AsFPPnQ-Bk1Dk4x/view?usp=sharing), and the unofficial [code is here](https://github.com/nsaftarli/perceptual-photomosaic).
 
 
 ### The Idea
